@@ -1,7 +1,7 @@
 {
-  "name": "FBBot",
+  "name": "my_fb_bot",
   "description": "FB Bot Template",
-  "repository": "https://github.com/kkdai/FBBotTemplate",
+  "repository": "https://github.com/YunChuan1/my_fb_bot",
   "keywords": ["Line", "go", "static"],
   "buildpacks": [
     {

@@ -1,1 +1,1 @@
-web: FBBotTemplate
+web: my_fb_bot

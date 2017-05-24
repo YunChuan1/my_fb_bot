@@ -17,6 +17,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"strings"
 )
 
 var mess = &Messenger{}
@@ -35,11 +36,12 @@ func main() {
 //MessageReceived :Callback to handle when message received.
 func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 	//log.Println("event:", event, " opt:", opts, " msg:", msg)
-	/*profile, err := mess.GetProfile(opts.Sender.ID)
+	profile, err := mess.GetProfile(opts.Sender.ID)
 	if err != nil {
 		fmt.Println(err)
 		return
-	}*/
+	}
+	
 	resp, err := mess.SendSimpleMessage(opts.Sender.ID, fmt.Sprintf("Hello   , %s %s, %s", profile.FirstName, profile.LastName, msg.Text))
 	if err != nil {
 		fmt.Println(err)

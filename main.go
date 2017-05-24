@@ -41,7 +41,8 @@ func MessageReceived(event Event, opts MessageOpts, msg ReceivedMessage) {
 		fmt.Println(err)
 		return
 	}
-	if strings.Contains(/*inText, */"三色線"){
+	inText := strings.ToLower(message.Text)
+	if strings.Contains(inText, "三色線"){
 	resp, err := mess.SendSimpleMessage(opts.Sender.ID, fmt.Sprintf("Hello   , %s %s, %s", profile.FirstName, profile.LastName, msg.Text))
 	if err != nil {
 		fmt.Println(err)
